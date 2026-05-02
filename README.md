@@ -1,3 +1,5 @@
+![App image](https://raw.githubusercontent.com/AxlRocket/YT-DLP-GuiWrapper/refs/heads/main/app.png)
+
 # YT-DLP-GuiWrapper
 I was borred to use command line to download songs so I made a simple app that hand all for me
 
