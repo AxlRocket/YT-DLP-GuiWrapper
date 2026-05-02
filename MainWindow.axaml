@@ -1,0 +1,142 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        MinWidth="800" MinHeight="420"
+        MaxWidth="800"
+        Width="800" Height="420"
+        x:Class="YT_DLP_GuiWrapper.MainWindow"
+        Title="YT_DLP_GuiWrapper">
+
+    <Grid RowDefinitions="Auto,Auto,Auto" VerticalAlignment="Stretch">
+        <Menu x:Name="WindowsMenu"
+            Grid.Row="0"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            IsVisible="False">
+            <MenuItem Header="YT-DLP-GuiWrapper">
+                <MenuItem Header="Show logs" Click="Menu_Logs_Click"/>
+                <MenuItem Header="About" Click="Menu_About_Click"/>
+                <MenuItem Header="Quit" Click="Menu_Quit_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel Grid.Row="1" Width="550" HorizontalAlignment="Center" Margin="0,40,0,0">
+
+            <GroupBox Header="Link">
+                    <TextBox x:Name="Link" Width="400" PlaceholderText="Your link here" IsEnabled="False"/>
+                </GroupBox>
+            
+
+            <StackPanel Orientation="Vertical" Margin="0,10,0,0">
+                <GroupBox Header="Output format" Margin="0,10,0,0">
+                    <StackPanel x:Name="OutputFormatContainer" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <RadioButton GroupName="OutputType" Content="MP3" 
+                                    IsChecked="True" IsEnabled="False"/>
+                        <RadioButton GroupName="OutputType" Content="FLAC"
+                                     x:Name="FormatFlac" Margin="25,0,25,0" IsEnabled="False"/>
+                        <RadioButton GroupName="OutputType" Content="WAV"
+                                     x:Name="FormatWav" IsEnabled="False"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Output bitrate" Margin="0,10,0,0">
+                    <StackPanel x:Name="OutputBitrateContainer" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <RadioButton GroupName="OutputBitrate" Content="128K" 
+                                    x:Name="Bitrate128" IsEnabled="False"/>
+                        <RadioButton GroupName="OutputBitrate" Content="192K"
+                                     IsChecked="True" Margin="25,0,25,0" IsEnabled="False"/>
+                        <RadioButton GroupName="OutputBitrate" Content="320K" 
+                                    x:Name="Bitrate320" IsEnabled="False"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto,Auto" Margin="0,0,0,0">
+
+            <TextBlock Grid.Row="0"
+                       x:Name="ProgressLabel"
+                       Text="Waiting for download"
+                       HorizontalAlignment="Center"
+                       Margin="0,25,0,6"/>
+
+            <ProgressBar Grid.Row="1"
+                         x:Name="DownloadState"
+                         Maximum="100" Minimum="0" Height="6"
+                         MinWidth="400"
+                         HorizontalAlignment="Center"
+                         Margin="0,0,0,30"/>
+
+            <Button Grid.Row="2"
+                    x:Name="MyButton"
+                    Foreground="#FFF"
+                    Width="150" Height="40"
+                    HorizontalAlignment="Center"
+                    Click="Button_Click"
+                    Margin="0,0,0,10"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Cursor="Hand"
+                    IsEnabled="False">
+                    <Button.Styles>
+                        <Style Selector="Button#MyButton">
+                            <Setter Property="Background" Value="#0088FF"/>
+                            <Setter Property="Foreground" Value="#fff"/>
+                            <Setter Property="Content" Value="Download"/>
+                        </Style>
+                        <Style Selector="Button#MyButton:pointerover /template/ ContentPresenter">
+                            <Setter Property="Background" Value="#4ea3ff"/>
+                            <Setter Property="Foreground" Value="#fff"/>
+                            <Setter Property="Content" Value="Download"/>
+                        </Style>
+                        <!-- Change style with tag "downloading" -->
+                        <Style Selector="Button#MyButton[Tag=downloading]">
+                            <Setter Property="Background" Value="#ff383c"/>
+                            <Setter Property="Foreground" Value="#fff"/>
+                            <Setter Property="Content" Value="Cancel"/>
+                        </Style>
+                        <Style Selector="Button#MyButton[Tag=downloading]:pointerover /template/ ContentPresenter">
+                            <Setter Property="Background" Value="#FF474A"/>
+                            <Setter Property="Foreground" Value="#fff"/>
+                            <Setter Property="Content" Value="Cancel"/>
+                        </Style>
+                    </Button.Styles>
+            </Button>
+
+            <Border Grid.Row="3"
+                x:Name="LogsPanel"
+                IsVisible="False"
+                BorderBrush="#CCCCCC"
+                Background="#efefef"
+                BorderThickness="1"
+                CornerRadius="6"
+                Margin="16,8,16,8">
+                <Grid RowDefinitions="Auto,*">
+
+                    <TextBlock Grid.Row="0"
+                            Text="Logs yt-dlp"
+                            FontWeight="SemiBold"
+                            Margin="8,6"/>
+
+                    <ScrollViewer Grid.Row="1"
+                                x:Name="LogsScroll"
+                                Height="150">
+                        <TextBlock x:Name="LogsContent"
+                                FontFamily="Menlo, Courier New"
+                                FontSize="12"
+                                TextWrapping="Wrap"
+                                Margin="8,0,8,8"
+                                Foreground="#333"/>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+
+            <TextBlock Grid.Row="4"
+                       x:Name="YtdlpVersion"
+                       FontSize="12"
+                       HorizontalAlignment="Left"
+                       Margin="4,0,0,0"/>
+        </Grid>       
+
+    </Grid>
+</Window>

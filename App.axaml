@@ -1,0 +1,18 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="YT_DLP_GuiWrapper.App"
+             xmlns:local="using:YT_DLP_GuiWrapper"
+             RequestedThemeVariant="Default"
+             Name="YT-DLP_GuiWrapper">
+
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="About" Click="About_Click"/>
+            <NativeMenuItem Header="Show logs" Click="Logs_Click"/>
+        </NativeMenu>
+    </NativeMenu.Menu>
+</Application>
