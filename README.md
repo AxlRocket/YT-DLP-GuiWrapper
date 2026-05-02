@@ -1,9 +1,14 @@
+![App image](https://raw.githubusercontent.com/AxlRocket/YT-DLP-GuiWrapper/refs/heads/main/app.png)
+
 # YT-DLP-GuiWrapper
 I was borred to use command line to download songs so I made a simple app that hand all for me
 
 > [!IMPORTANT]  
 > __ONLY FOR YOUTUBE AND YOUTUBE MUSIC__
 
+> [!TIP]
+> Use [MusicBrainz](https://musicbrainz.org/) to add all metadatas to your files
+  
 ## How to use it
 
 First you need :  
@@ -14,7 +19,11 @@ First you need :
 Open the app and paste your link, select the file output format and the bitrate, click on the Download button and that's all.
 If you're downloading a playlist the app will create a folder otherwise the file will be downloaded directly
 
+> [!NOTE]
 > Find the downloaded files in your Downloads folder
+
+> [!NOTE]
+> Output bitrate is ignored if you download in FLAC or WAV format
 
 ## Install yt-dlp & ffmpeg
 
@@ -53,5 +62,3 @@ brew install yt-dlp
 ```
 brew install ffmpeg
 ```
-
-## 
