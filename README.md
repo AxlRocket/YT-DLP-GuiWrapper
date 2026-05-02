@@ -45,7 +45,7 @@ winget install yt-dlp
 winget install ffmpeg
 ```
 
-Manually : (you have to put yt-dlp and ffmpeg in specifics directories)
+Manually : (you have to put yt-dlp and ffmpeg in specifics directories)  
 For yt-dlp :
 > C:\Program Files\yt-dlp\yt-dlp.exe
 
