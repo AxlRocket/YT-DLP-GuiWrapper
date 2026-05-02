@@ -19,7 +19,11 @@ First you need :
 Open the app and paste your link, select the file output format and the bitrate, click on the Download button and that's all.
 If you're downloading a playlist the app will create a folder otherwise the file will be downloaded directly
 
+> [!NOTE]
 > Find the downloaded files in your Downloads folder
+
+> [!NOTE]
+> Output bitrate is ignored if you download in FLAC or WAV format
 
 ## Install yt-dlp & ffmpeg
 
