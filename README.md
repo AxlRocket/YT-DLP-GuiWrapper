@@ -14,13 +14,13 @@ I was borred to use command line to download songs so I made a simple app that h
 First you need :  
 - yt-dlp
 - ffmpeg
-- MacOS 13 (Ventura) or Windows 10 x64
+- MacOS 13 (Ventura) or Windows 10 x64 or Windows 11 x64
 
 Open the app and paste your link, select the file output format and the bitrate, click on the Download button and that's all.
 If you're downloading a playlist the app will create a folder otherwise the file will be downloaded directly
 
 > [!NOTE]
-> Find the downloaded files in your Downloads folder
+> Find the downloaded files in your __Downloads__ folder
 
 > [!NOTE]
 > Output bitrate is ignored if you download in FLAC or WAV format
@@ -45,7 +45,7 @@ winget install yt-dlp
 winget install ffmpeg
 ```
 
-Manually : (you have to put yt-dlp and ffmpeg in specifics directories)
+Manually : (you have to put yt-dlp and ffmpeg in specifics directories)  
 For yt-dlp :
 > C:\Program Files\yt-dlp\yt-dlp.exe
 
