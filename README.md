@@ -6,6 +6,9 @@ I was borred to use command line to download songs so I made a simple app that h
 > [!IMPORTANT]  
 > __ONLY FOR YOUTUBE AND YOUTUBE MUSIC__
 
+> [!TIP]
+> Use [MusicBrainz](https://musicbrainz.org/) to add all metadatas to your files
+  
 ## How to use it
 
 First you need :  
@@ -55,5 +58,3 @@ brew install yt-dlp
 ```
 brew install ffmpeg
 ```
-
-## 
