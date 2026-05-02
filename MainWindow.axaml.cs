@@ -121,7 +121,7 @@ public partial class MainWindow : Window
             {
                 Dispatcher.Invoke(async () =>
                 {
-                    await ShowMessageAsync("Sorry", "FFMPEG not installed !\n\nbrew install ffmpeg");
+                    await ShowMessageAsync("Sorry", "FFMPEG not installed !");
                 });
             }
         }
@@ -129,7 +129,7 @@ public partial class MainWindow : Window
         {
             Dispatcher.Invoke(async () =>
             {
-                await ShowMessageAsync("Sorry", "YT-DLP not installed !\n\nbrew install yt-dlp");
+                await ShowMessageAsync("Sorry", "YT-DLP not installed !");
             });
         }        
     }
@@ -313,7 +313,7 @@ public partial class MainWindow : Window
     CancellationToken ct = default)
     {
         var template = System.IO.Path.Combine(outputFolder, "%(artist)s - %(title)s.%(ext)s");
-        var args = $"-x --audio-format {format} --audio-quality {bitrate} " +
+        var args = $"-x --audio-format {format} --audio-quality {bitrate} --embed-thumbnail " +
                 $"--newline -o \"{template}\" \"{url}\"";
 
         var psi = new ProcessStartInfo
@@ -447,7 +447,7 @@ public partial class MainWindow : Window
     => Environment.Exit(0);
 
     private async void Menu_About_Click(object? sender, RoutedEventArgs e)
-        => await ShowMessageAsync("About", "YT-DLP GuiWrapper\n\nMade by AxlRocket");
+        => await ShowMessageAsync("About", "YT-DLP GuiWrapper\n\nMade by AxlRocket with Avalonia UI");
 
     private void Menu_Logs_Click(object? sender, RoutedEventArgs e)
         => showLogs();
