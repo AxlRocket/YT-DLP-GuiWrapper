@@ -14,7 +14,7 @@ I was borred to use command line to download songs so I made a simple app that h
 First you need :  
 - yt-dlp
 - ffmpeg
-- MacOS 13 (Ventura) or Windows 10 x64
+- MacOS 13 (Ventura) or Windows 10 x64 or Windows 11 x64
 
 Open the app and paste your link, select the file output format and the bitrate, click on the Download button and that's all.
 If you're downloading a playlist the app will create a folder otherwise the file will be downloaded directly
