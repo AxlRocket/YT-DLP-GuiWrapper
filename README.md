@@ -16,14 +16,16 @@ First you need :
 - ffmpeg
 - MacOS (at least 13 - Ventura) __or__ Windows 10 x64 __or__ Windows 11 x64
 
-Copy the app in your Application folder, open a terminal and copy/paste this :
-```
-codesign --deep --force --sign - /Applications/YT-DLP-GuiWrapper.app
-```
-<sub>I can't sign the app without an Apple Developper account</sub>
-
 Open the app and paste your link, select the file output format and the bitrate, click on the Download button and that's all.
 If you're downloading a playlist the app will create a folder otherwise the file will be downloaded directly
+
+> [!WARNING]
+> #### For MacOS Users
+> Copy the app in your Application folder, open a terminal and copy/paste this :  
+> ```  
+> codesign --deep --force --sign - /Applications/YT-DLP-GuiWrapper.app  
+> ``` 
+> <sub>I can't sign the app without an Apple Developper account</sub>  
 
 > [!NOTE]
 > Find the downloaded files in your __Downloads__ folder
