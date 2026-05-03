@@ -14,7 +14,13 @@ I was borred to use command line to download songs so I made a simple app that h
 First you need :  
 - yt-dlp
 - ffmpeg
-- MacOS 13 (Ventura) or Windows 10 x64 or Windows 11 x64
+- MacOS (at least 13 - Ventura) __or__ Windows 10 x64 __or__ Windows 11 x64
+
+Copy the app in your Application folder, open a terminal and copy/paste this :
+```
+codesign --deep --force --sign - /Applications/YT-DLP-GuiWrapper.app
+```
+<sub>I can't sign the app without an Apple Developper account</sub>
 
 Open the app and paste your link, select the file output format and the bitrate, click on the Download button and that's all.
 If you're downloading a playlist the app will create a folder otherwise the file will be downloaded directly
@@ -62,3 +68,13 @@ brew install yt-dlp
 ```
 brew install ffmpeg
 ```
+
+## Tests
+
+App tested on MacOS Sequoia (15), MacOS Ventura (13) and Windows 11 x64
+
+With yt-dlp 2026.03.17 and ffmpeg 8.1
+
+## About
+
+Coded in C# (NET10) with Avalonia UI 
